@@ -72,7 +72,7 @@
                 <artifactId>allure-maven</artifactId>
                 <version>2.12.0</version>
                 <configuration>
-                    <reportVersion>2.6.0</reportVersion>
+                    <reportVersion>${allure-junit4.version}</reportVersion>
                 </configuration>
             </plugin>
         </plugins>
