@@ -30,7 +30,7 @@ public class MainTest {
     public void TestButton (){
         By nadpis = By.xpath("//b");
         String heading = driver.findElement(nadpis).getText();;
-        Assert.assertEquals("Для перехода на \"Завалинку\" давите на палатку",heading);
+        Assert.assertEquals("Дя перехода на \"Завалинку\" давите на палатку",heading);
         System.out.println("Test");
     }
 
