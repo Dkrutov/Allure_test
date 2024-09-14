@@ -28,7 +28,7 @@ public class MainTest {
     }
     @Step("Проверка 1")
     public static void TestButton(String text1) {
-        Assert.assertEquals("Дя перехода на \"Завалинку\" давите на палатку",text1);
+        Assert.assertEquals("Для перехода на \"Завалинку\" давите на палатку",text1);
     }
 
     @Test
