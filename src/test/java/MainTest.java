@@ -1,3 +1,4 @@
+import io.qameta.allure.Step;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -25,12 +26,16 @@ public class MainTest {
 
 
     }
+    @Step("Проверка 1")
+    public static void TestButton(String text1) {
+        Assert.assertEquals("Дя перехода на \"Завалинку\" давите на палатку",text1);
+    }
 
     @Test
     public void TestButton (){
         By nadpis = By.xpath("//b");
-        String heading = driver.findElement(nadpis).getText();;
-        Assert.assertEquals("Дя перехода на \"Завалинку\" давите на палатку",heading);
+        String heading = driver.findElement(nadpis).getText();
+        TestButton(heading);
         System.out.println("Test");
     }
 
