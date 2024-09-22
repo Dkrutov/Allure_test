@@ -1,4 +1,4 @@
-import io.qameta.allure.Step;
+import io.qameta.allure.*;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -26,11 +26,14 @@ public class MainTest {
 
 
     }
-    @Step("Проверка 1")
+    @Step("Проверка заголовка: {text1}}")
     public static void TestButton(String text1) {
         Assert.assertEquals("Для перехода на \"Завалинку\" давите на палатку",text1);
     }
 
+    @Epic(value = "Математика")
+    @Feature(value = "Простые математические операции")
+    @Story(value = "Кнопка")
     @Test
     public void TestButton (){
         By nadpis = By.xpath("//b");
@@ -39,13 +42,18 @@ public class MainTest {
         System.out.println("Test");
     }
 
-
+    @Epic(value = "Математика")
+    @Feature(value = "Простые математические операции")
+    @Story(value = "Сложение")
     @Test
     public void  method1 (){
 
         Assert.assertTrue("Value are not equals",1 + 1 == 2);
 
     }
+    @Epics(value = {@Epic(value = "Математика"), @Epic(value = "Геометрия")})
+    @Features(value = {@Feature(value = "Тригонометрия"), @Feature(value = "Простые математические операции")})
+    @Stories(value = {@Story(value = "Синус"), @Story(value = "Синусоида")})
 
     @After
     public void tearDown(){
