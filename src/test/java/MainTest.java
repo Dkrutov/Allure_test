@@ -35,6 +35,11 @@ public class MainTest {
     @Feature(value = "Простые математические операции")
     @Story(value = "Кнопка")
     @Test
+    @Severity(value = SeverityLevel.TRIVIAL)
+    @Owner(value = "КДА")
+    @Description(value = "Тест проверяет текст")
+    @Links(value = {@Link(name = "Ссылка1", url = "http://sberbank.ru"),
+            @Link(name = "Ссылка2", url = "http://yandex.ru")})
     public void TestButton (){
         By nadpis = By.xpath("//b");
         String heading = driver.findElement(nadpis).getText();
@@ -45,7 +50,12 @@ public class MainTest {
     @Epic(value = "Математика")
     @Feature(value = "Простые математические операции")
     @Story(value = "Сложение")
+    @Description(value = "Тест проверяет математику")
+
     @Test
+    @Severity(value = SeverityLevel.CRITICAL)
+    @Flaky
+    @Owner(value = "КДА")
     public void  method1 (){
 
         Assert.assertTrue("Value are not equals",1 + 1 == 2);
