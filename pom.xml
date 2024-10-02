@@ -15,7 +15,11 @@
     </properties>
 
     <dependencies>
-
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-resources-plugin</artifactId>
+            <version>3.0.2</version>
+        </dependency>
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
@@ -89,10 +93,10 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${allure.results.directory}</outputDirectory>
+                            <outputDirectory>${basedir}/target/allure-results</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>src/main/resources</directory>
+                                    <directory>src/test/resources</directory>
                                     <includes>
                                         <include>environment.properties</include>
                                     </includes>
